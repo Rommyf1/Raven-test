@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js", 
     "dev": "lite-server"
   },
   "keywords": [
@@ -17,7 +17,7 @@
   "author": "Rommy Fernández",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^27.2.0",
+    "jest": "^29.7.0",
     "lite-server": "^2.6.1"
   }
 }
