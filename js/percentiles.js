@@ -1,4 +1,4 @@
-const groups = { 
+export const groups = { 
 firstGroup: {
 	"5": 14,
 	"10": 24,
@@ -88,7 +88,7 @@ eigthGroup: {
 	}
 };
 
-const personRanges = {
+export const personRanges = {
 	"12": "firstGroup",
 	"14": "secondGroup",
 	"16": "thirdGroup",
