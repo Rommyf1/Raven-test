@@ -1,0 +1,145 @@
+:root {
+  --primary: #6c63ff;
+  --dark-primary-background: rgb(15 23 42);
+  --dark-secondary-background: rgb(153 170 199 / 0.3);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Montserrat", system-ui, arial, sans-serif;
+}
+
+body {
+  background-color: rgb(111 45 168);
+  color-scheme: dark light;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.section-container {
+  width: 95%;
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column-reverse;
+  transition: 0.5s;
+}
+
+h1, h2 {
+  text-wrap: balance;
+}
+
+h1, footer {
+  padding: 1rem 0;
+  color: #fff;
+}
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.theorical-concept {
+  margin: 1.2rem 0;
+  text-wrap: pretty;
+  font-size: 1rem;
+}
+
+form {
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
+
+.input-container {
+  margin: 1.5rem 0;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  margin: 0.5em 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-form:required:not(:placeholder-shown):invalid {
+  border: 1px solid #f00;
+  background-color: rgb(255 0 0 / 0.05);
+}
+
+.input-form:required:not(:placeholder-shown):valid {
+  border: 1px solid #0f0;
+  background-color: rgb(0 255 0 / 0.05);
+}
+
+.submit-button {
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.input-error {
+  border: 1px solid #f00;
+  background-color: rgb(255 0 0 / 0.05);
+}
+
+@media (min-width: 768px) {
+  main {
+    gap: 0;
+  }
+
+  .section-container {
+    flex-direction: row;
+    align-items: center;
+    max-width: 1024px;
+    transition: 0.5s;
+  }
+
+  article {
+    width: 50%;
+    padding: 1rem;
+  }
+
+  .theorical-concept {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 1.5rem 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-primary-background);
+  }
+
+  h1,
+  .section-container,
+  footer {
+    color: #e1e1e1;
+  }
+
+  .section-container {
+    background-color: var(--dark-secondary-background);
+  }
+
+  input {
+    border: 1px solid transparent;
+  }
+}
