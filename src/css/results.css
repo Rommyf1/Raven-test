@@ -1,0 +1,95 @@
+:root{
+    --primary: #6C63FF;
+    --dark-primary-background: rgb(15 23 42);
+    --dark-secondary-background: rgb(153 170 199 / .3);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, arial, sans-serif;
+}
+
+html{
+  color-scheme: dark light;
+}
+
+.modal-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-primary-background);
+}
+
+.modal-section .modal-image-container{
+  animation: redimensionar .5s .5s backwards;
+}
+
+.modal-section .modal{
+  animation: deslizar .5s backwards;
+}
+
+.modal{
+  width: 60%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.modal-image-container{
+  padding: 1.5em 15%;
+}
+
+img, .modal-info, .modal-image-container{
+  width: 100%;
+}
+
+.modal-title{
+  margin: .5em 15%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.modal-info{
+  padding: 1rem 15%;
+  margin: 1em 0;
+}
+
+.result-data{
+  margin-top: .5rem;
+}
+
+.modal-action-button{
+  text-decoration: none;
+  color: #fff;
+  margin: 1em 15%;
+  padding: 1em 1.5em;
+  background-color: var(--primary);
+  border-radius: 10px;
+  text-align: center;
+}
+
+@keyframes deslizar{
+  from{
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes redimensionar{
+  from{
+    transform: scale(0);
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  .modal{
+    background-color: var(--dark-secondary-background);
+  }
+}
